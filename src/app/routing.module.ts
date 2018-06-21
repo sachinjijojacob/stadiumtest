@@ -2,10 +2,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 import {AddComponent} from './add/add.component';
 import {LandingPageComponent} from './landing-page/landing-page.component';
+import {LoginComponent} from './login/login.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'main', pathMatch: 'full' },
-  { path: 'main', component: LandingPageComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+
+  { path: 'dashboard', component: LandingPageComponent },
 
   { path: 'add', component: AddComponent }
 ];
