@@ -1,0 +1,13 @@
+
+
+<form md-theme="docs-dark" layout-gt-sm="row" layout-padding [formGroup]="myForm" (ngSubmit)="addStadium(myForm)">
+  <input formControlName="id" placeholder="Stadium Number">
+
+ <input formControlName="title" placeholder="Title">
+  <input formControlName="imgURL" placeholder="Image URL">
+  <input formControlName="details" placeholder="Short Detail">
+  <input formControlName="moreDetails" placeholder="More Short Detail">
+  <button  type="submit" [disabled]="myForm.invalid">
+    Send
+  </button>
+</form>

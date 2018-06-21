@@ -4,16 +4,16 @@ import { NgModule } from '@angular/core';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCardModule, MatCheckboxModule, MatIconModule, MatMenuModule} from '@angular/material';
-import { ModalDialogModule } from 'ngx-modal-dialog';
-import {ModalDialogService} from 'ngx-modal-dialog';
-import {PopupComponent} from './popup/popup.component';
-import { NgxSmartModalModule } from 'ngx-smart-modal';
 import {ModalModule} from 'ngx-bootstrap';
 import {MainService} from './main-service.service';
+import { AddComponent } from './add/add.component';
+import {routingModule} from './routing.module';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AddComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +24,9 @@ import {MainService} from './main-service.service';
     MatMenuModule,
     MatIconModule,
     MatCardModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    routingModule,
+    ReactiveFormsModule,
   ],
   providers: [MainService],
   bootstrap: [AppComponent]

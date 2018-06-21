@@ -1,5 +1,6 @@
-<ul class="cards">
 
+<button [routerLink]="['../add']" class="action-button shadow animate red">ADD +</button>
+<ul class="cards">
   <li *ngFor="let item of stadiumData; let i = index" class="cards__item">
     <div class="card">
       <mat-card class="example-card ">
@@ -20,9 +21,10 @@
       </mat-card>
     </div>
   </li>
-
+<li>
+  <router-outlet></router-outlet>
+</li>
 </ul>
-
 
 
 <ng-template #template>
@@ -36,3 +38,5 @@
     {{selectedStadium.moreDetails}}
   </div>
 </ng-template>
+
+

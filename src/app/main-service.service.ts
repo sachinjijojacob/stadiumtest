@@ -52,4 +52,7 @@ export class MainService   implements OnInit {
   getData() {
     return this.stadium;
   }
+  addData(d: any) {
+    this.stadium.push(d);
+  }
 }
