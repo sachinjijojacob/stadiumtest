@@ -9,6 +9,7 @@ import {ModalDialogService} from 'ngx-modal-dialog';
 import {PopupComponent} from './popup/popup.component';
 import { NgxSmartModalModule } from 'ngx-smart-modal';
 import {ModalModule} from 'ngx-bootstrap';
+import {MainService} from './main-service.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import {ModalModule} from 'ngx-bootstrap';
     MatCardModule,
     ModalModule.forRoot()
   ],
-  providers: [],
+  providers: [MainService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
