@@ -9,11 +9,18 @@ import {MainService} from './main-service.service';
 import { AddComponent } from './add/add.component';
 import {routingModule} from './routing.module';
 import {ReactiveFormsModule} from '@angular/forms';
+import {AngularFireModule} from 'angularfire2';
+import {environment} from '../environments/environment';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
+import {AngularFireAuthModule} from 'angularfire2/auth';
+import {AuthService} from './services/auth.service';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddComponent
+    AddComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
@@ -27,8 +34,11 @@ import {ReactiveFormsModule} from '@angular/forms';
     ModalModule.forRoot(),
     routingModule,
     ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
-  providers: [MainService],
+  providers: [MainService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
