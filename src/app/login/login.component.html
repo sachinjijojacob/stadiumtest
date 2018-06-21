@@ -1,18 +1,39 @@
-<div class="form-group">
-  <label >Email address</label>
-  <input type="email" class="form-control" [(ngModel)]="user.email" placeholder="Email" required>
+<!--<div class="form-group">-->
+  <!--<label >Email address</label>-->
+  <!--<input type="email" class="form-control" [(ngModel)]="user.email" placeholder="Email" required>-->
+<!--</div>-->
+
+<!--<div class="form-group">-->
+  <!--<label>Password</label>-->
+  <!--<input type="password" class="form-control" [(ngModel)]="user.password" placeholder="Password" required>-->
+<!--</div>-->
+
+
+<!--<div class="form-group">-->
+  <!--<button type="buton" class="btn btn-primary btn-block" style="margin-bottom: 20px" (click)="signInWithEmail()">-->
+
+    <!--Login with Email-->
+
+  <!--</button>-->
+<!--</div>-->
+
+
+<!-- <script>
+(function(){
+  $('.message a').click(function(){
+     $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+  });
+});
+</script> -->
+<div class="login-page">
+  <div class="form" >
+
+    <form class="login-form default-fadeout" ng-hide="hiddenlog" ng-class="{fadeout: startFadeout}">
+      <input type="text" placeholder="username"[(ngModel)]="user.email" />
+      <input type="password" placeholder="password" [(ngModel)]="user.password" />
+      <button  (click)="signInWithEmail()">login</button>
+      <p class="message">Not registered? <a ng-click="hidelog()" href="#">Create an account</a></p>
+    </form>
+  </div>
 </div>
 
-<div class="form-group">
-  <label>Password</label>
-  <input type="password" class="form-control" [(ngModel)]="user.password" placeholder="Password" required>
-</div>
-
-
-<div class="form-group">
-  <button type="buton" class="btn btn-primary btn-block" style="margin-bottom: 20px" (click)="signInWithEmail()">
-
-    Login with Email
-
-  </button>
-</div>
